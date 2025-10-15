@@ -1,0 +1,52 @@
+/* ----------------chung------------------------------ */
+body {
+  height: 100vh;
+  background: linear-gradient(#fa7c54, #ec2c5a);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.container {
+  height: 100vh;
+  margin: 30px 0 0 30px;
+  background-color: #fff;
+  border-radius: 10px 0 0 0;
+  position: relative;
+}
+.container .main-container {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+/* thiet ke vien bao quanh */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #fff;
+}
+.container::before {
+  background-color: #fff;
+  width: 30px;
+  height: 90px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  bottom: 0;
+  left: -30px;
+}
+.container::after {
+  background-color: #fff;
+  width: 90px;
+  height: 30px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  right: 0;
+  top: -30px;
+}
+/* css rieng */
+/* -------------------------------nav--------------------------------------- */
+.navigation {
+  padding: 28px 58px;
+}
+
+.home-content {
+  width: 100vh;
+  height: 100vh;
+}
