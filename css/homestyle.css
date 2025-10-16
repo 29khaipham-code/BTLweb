@@ -5,6 +5,7 @@
 html {
   font-size: 62.5%;
   font-family: system-ui;
+  font-size: 1rem;
 }
 .bg-color {
   height: 100vh;
@@ -66,25 +67,30 @@ html {
 }
 .navigation nav ul li {
   padding-top: 15px;
-  display: flex;
-  align-items: center;
 }
-.navigation li:nth-child(1) {
-  gap: 17px;
-}
-.navigation li:nth-child(2) {
-  gap: 10px;
-}
-.navigation li:nth-child(3) {
-  gap: 16px;
-}
-.navigation li:nth-child(4) {
-  gap: 15px;
-}
+
 .navigation a {
   text-decoration: none;
   color: #8a8a8a;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navigation li:nth-child(1) a {
+  gap: 17px;
+}
+.navigation li:nth-child(2) a {
+  gap: 10px;
+}
+.navigation li:nth-child(4) a {
+  gap: 14px;
+}
+.navigation .active {
+  color: #000;
+}
+.navigation li:hover a {
+  color: #000;
 }
 .navigation .support {
   margin-top: auto;
@@ -94,6 +100,7 @@ html {
   display: block;
   padding-bottom: 10px;
 }
+
 /* -----khoi noi dung----- */
 .container-content {
   background-color: #f3f3f7;
