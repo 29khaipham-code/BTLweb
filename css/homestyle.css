@@ -5,7 +5,9 @@
 html {
   font-size: 62.5%;
   font-family: system-ui;
-  font-size: 1rem;
+}
+body {
+  font-size: 16px;
 }
 .bg-color {
   height: 100vh;
@@ -170,7 +172,7 @@ html {
 }
 .home-page .search-container {
   width: 100%;
-  max-width: 400px;
+  max-width: 40rem;
 }
 .home-page .search-container .button {
   background-color: #f3f3f7;
@@ -189,12 +191,12 @@ html {
 
 .home-page .lang-container {
   width: 100%;
-  max-width: 125px;
+  max-width: 12.5rem;
   /* justify-content: space-around; */
 }
 .home-page .time-container {
   width: 100%;
-  max-width: 275px;
+  max-width: 27.5rem;
 }
 .home-page .time-container .time .icon {
   display: flex;
@@ -203,7 +205,7 @@ html {
 }
 
 .home-page .info {
-  max-width: 150px;
+  max-width: 15rem;
   width: 100%;
 }
 .info .avatar {
