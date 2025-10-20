@@ -102,6 +102,10 @@ body {
   display: block;
   padding-bottom: 10px;
 }
+/* .active::before{
+ content: "";
+
+} */
 
 /* -----khoi noi dung----- */
 .container-content {
@@ -118,6 +122,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
   background-color: #ffffff4d;
   backdrop-filter: blur(10px);
 }
@@ -219,13 +224,198 @@ body {
 }
 .home-page .hotEvent {
   display: flex;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 10px;
 }
 .hotEvent .card-list {
-  background: linear-gradient(135deg, #eb5231 5%, #571fcf 95%);
-  /* background-blend-mode: multiply; */
-  height: 150px;
+  background: linear-gradient(165deg, #eb5231 5%, #571fcf 95%);
+  height: 170px;
   width: 400px;
-  padding: 20px;
   border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.hotEvent .card {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  /* transform: translateX(-100%);
+  transition: all ease 0.5s; */
+}
+.hotEvent .card .card-item {
+  width: 100%;
+}
+.hotEvent .card .desc {
+  color: #fff;
+  padding: 5px;
+}
+.hotEvent .card .desc:nth-child(2) {
+  line-height: 1.5;
+}
+.hotEvent .desc.author {
+  text-align: right;
+}
+.hotEvent .dots {
+  display: flex;
+  gap: 5px;
+  margin-top: auto;
+}
+.hotEvent .dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid #fff;
+}
+
+.hotEvent .event-active {
+  background-color: #fff;
+}
+
+.hotEvent .new-arrivals {
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  width: 650px;
+  background: linear-gradient(-185deg, #eb5231 5%, #571fcf 95%);
+  border-radius: 20px;
+  margin-right: 25px;
+  overflow: hidden;
+}
+.hotEvent .new-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+.hotEvent .new-arrivals .arrivals-list {
+  display: flex;
+  margin: auto 0;
+  height: 168px;
+  width: calc(90% - 1px);
+  background-color: #fff;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+}
+.hotEvent .tittle-new {
+  width: 10%;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+.hotEvent .new-arrivals .arrivals-list .arrivals {
+  height: calc(100% - 15px);
+  width: 115px;
+  margin: auto 24px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #c9c5c5c7, -1px -1px 2px #c9c5c5c7;
+  flex-shrink: 0;
+}
+.hotEvent .new-arrivals .img {
+  height: calc(100% - 16px);
+  width: calc(100% - 16px);
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #8a8a8a;
+}
+.hotEvent .new-arrivals img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.arrivals:hover {
+  transform: scale(1.05);
+  transition: all ease 0.5s;
+  box-shadow: 3px 3px 2px rgb(202, 201, 200);
+}
+
+/* boook list */
+
+.book .name-tag {
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 30px 0;
+}
+.book .book-container {
+  margin: 45px 0;
+}
+.book .sub-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.book .sub-header h3 {
+  color: #8a8a8a;
+  font-size: 2rem;
+}
+.book .btn {
+  border: none;
+  margin-right: 25px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #8a8a8a;
+  background-color: transparent;
+  cursor: pointer;
+}
+.book .book-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  overflow-y: hidden;
+  /* scroll-behavior: smooth; */
+}
+.book .book-list::-webkit-scrollbar {
+  display: none;
+}
+.book .book-card {
+  margin-top: 5px;
+  width: 125px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background-color: #fff;
+}
+.book .book-card .book-img {
+  width: calc(100% - 20px);
+  margin: 10px auto 0;
+}
+.book .book-list img {
+  width: 100%;
+}
+
+.book .book-card-tittle {
+  font-size: 1.2rem;
+  color: #8a8a8a;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.book .book-card-author {
+  color: #8a8a8a;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.book .rate {
+  font-size: 1rem;
+  color: #8a8a8a;
+  padding-bottom: 10px;
+}
+.book .book-card p {
+  padding-bottom: 5px;
+}
+.book .book-card:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: all ease 0.3s;
+  box-shadow: 3px 3px 5px #b8b5b5, -3px 0 5px #b8b5b5;
 }
