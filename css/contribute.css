@@ -1,0 +1,614 @@
+/* ----------------chung------------------------------ */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: system-ui;
+}
+body {
+  font-size: 16px;
+}
+.bg-color {
+  height: 100vh;
+  background: linear-gradient(#fa7c54, #ec2c5a);
+  /* position: relative; */
+}
+.layout {
+  height: calc(100% - 30px);
+  width: calc(100% - 30px);
+  top: 30px;
+  left: 30px;
+  background-color: #fff;
+  border-radius: 10px 0 0 0;
+  position: relative;
+}
+
+/* thiet ke vien bao quanh */
+.layout::before,
+.layout::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #fff;
+}
+.layout::before {
+  background-color: #fff;
+  width: 30px;
+  height: 90px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  bottom: 0;
+  left: -30px;
+}
+.layout::after {
+  background-color: #fff;
+  width: 90px;
+  height: 30px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  right: 0;
+  top: -30px;
+}
+.layout .main-container {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  height: 100%;
+}
+.container {
+  height: 100%;
+}
+/* css rieng */
+
+/* -------------------------------nav--------------------------------------- */
+.main-container .navigation {
+  padding: 28px 58px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navigation nav {
+  margin-top: 50px;
+}
+.navigation nav ul li {
+  padding-top: 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #8a8a8a;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.navigation li:nth-child(1) a {
+  gap: 17px;
+}
+.navigation li:nth-child(2) a {
+  gap: 10px;
+}
+.navigation li:nth-child(4) a {
+  gap: 14px;
+}
+.navigation .active {
+  color: #000;
+}
+.navigation li:hover a {
+  color: #000;
+}
+.navigation .support {
+  margin-top: auto;
+  padding: 0 0 40px 0;
+}
+.navigation .support span {
+  display: block;
+  padding-bottom: 10px;
+}
+
+/* -----khoi noi dung----- */
+.container-content {
+  background-color: #f3f3f7;
+  height: calc(100% - 30px);
+  border-radius: 0 0 15px 15px;
+  margin-right: 20px;
+  overflow-y: scroll;
+}
+
+/* -------------------header-search------------------ */
+.home-page .header-home {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ffffff4d;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+.fx {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 999px;
+  gap: 15px;
+  box-shadow: 1px 1px 2px rgb(210, 198, 198), -1px -1px 2px rgb(210, 198, 198);
+  margin: 15px;
+}
+.icon {
+  margin-left: 15px;
+}
+.home-page .search-btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+}
+.home-page .avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+}
+.icon.search::after {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #8a8a8a;
+  position: relative;
+  right: 43px;
+}
+.icon.search {
+  height: calc(100% - 5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  /* margin: auto; */
+}
+.icon.search img {
+  padding-right: 15px;
+}
+.home-page .search-container {
+  width: 100%;
+  max-width: 40rem;
+}
+.home-page .search-container .button {
+  background-color: #f3f3f7;
+  padding: 5px;
+  height: 100%;
+  border-radius: 999px 0 0 999px;
+  display: flex;
+  align-items: center;
+}
+.home-page .search-container input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  flex: 1;
+}
+
+.home-page .lang-container {
+  width: 100%;
+  max-width: 12.5rem;
+  /* justify-content: space-around; */
+}
+.home-page .time-container {
+  width: 100%;
+  max-width: 27.5rem;
+}
+.home-page .time-container .time .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-page .info {
+  max-width: 15rem;
+  width: 100%;
+}
+.info .avatar {
+  height: calc(100% - 4px);
+  border-radius: 999px;
+  margin-left: 4px;
+}
+/* --------dropdown --------- */
+.button {
+  position: relative;
+  display: inline-block;
+
+  padding: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  border-radius: 20px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  top: 40px;
+}
+.dropdown-content a {
+  color: #000;
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  background-color: #fff;
+}
+.dropdown-content a:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.dropdown-content a:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.button:hover .dropdown-content {
+  display: block;
+}
+/* ========== Tổng thể trang Contribute ========== */
+.contribute-page {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-start;
+  gap: 4%; /* Khoảng cách 4% */
+  padding: 60px 80px;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: all 0.4s ease;
+}
+
+/* Hiệu ứng mượt khi vào */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------- */
+/* KHỐI FORM BÊN TRÁI: ĐÃ ĐƯỢC CHUYỂN SANG DÙNG WIDTH: 55% */
+/* ---------------------------------------------------- */
+.book-form {
+  /* Thay flex: 1.1 và flex: 0 0 700px bằng width 55% */
+  flex: 0 0 auto;
+  width: 55%;
+
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.book-form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.book-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.book-form form {
+  display: block;
+  gap: 0;
+}
+
+/* Container 2 cột chính trong form */
+.form-columns {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+/* CỘT TRÁI (60% của form) */
+.column-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CỘT PHẢI (40% của form) */
+.column-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- Style chung cho Input/Select/Textarea --- */
+.column-left input[type="text"],
+.column-right select {
+  width: 100%;
+  height: 48px;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+}
+
+.column-left textarea {
+  width: 100%;
+  height: 111px;
+  padding: 15px 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  resize: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff6f42;
+  box-shadow: 0 0 6px rgba(255, 111, 66, 0.4);
+}
+
+/* Style Available Format (Cột phải) */
+.available-format-column {
+  margin-top: 5px;
+}
+
+.available-format-column label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 5px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: #5c62ec;
+}
+
+/* ========== Nút Submit ========== */
+/* Dọn dẹp các định nghĩa Submit trùng lặp và dùng lại .btn-submit cuối cùng */
+.btn-submit {
+  background-color: #f0643b; /* Màu cam đậm */
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 25px; /* Giữ margin top để tách biệt */
+  margin-left: 0;
+  box-shadow: 0 4px 10px rgba(240, 100, 59, 0.4);
+}
+
+.btn-submit:hover {
+  background-color: #e8552f;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------- */
+/* KHỐI INFO BÊN PHẢI: ĐÃ ĐƯỢC CHUYỂN SANG DÙNG WIDTH: 40% */
+/* ---------------------------------------------------- */
+.contribute-info {
+  /* Thay flex: 1.1 bằng width 40% */
+  flex: 0 0 auto;
+  width: 40%;
+
+  animation: slideIn 0.7s ease-in-out;
+  transition: all 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contribute-info h1 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contribute-info h2 {
+  /* Đặt kích thước nhỏ hơn 50px */
+  font-size: 35px;
+  font-weight: 700;
+  color: #333; /* Giả định bạn muốn màu đen như ảnh */
+  /* RẤT QUAN TRỌNG: Loại bỏ margin top để nó sát với dòng trên */
+  margin-top: 0;
+  /* Thêm margin bottom để tách với tiêu đề phụ "Your Previous Contributions" */
+  margin-bottom: 30px;
+}
+
+.contribute-info h1 span {
+  color: #ff8800;
+}
+
+.contribute-info h3 {
+  margin: 30px 0 20px;
+  color: #555;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+/* ---------------------------------------------------- */
+/* DANH SÁCH SÁCH: DÙNG FLEX ĐỂ CHIA ĐỀU KHÔNG GIAN (33.33%) */
+/* ---------------------------------------------------- */
+.book-list {
+  display: flex;
+  gap: 25px;
+  /* NGĂN CHẶN CÁC MỤC XUỐNG DÒNG */
+  flex-wrap: nowrap;
+  /* Loại bỏ overflow-x: auto; để không có thanh cuộn */
+  transition: all 0.4s ease;
+}
+
+.book-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* THAY ĐỔI QUAN TRỌNG: 
+    flex-grow: 1 (Cho phép mở rộng nhẹ)
+    flex-shrink: 1 (Cho phép co lại để vừa với không gian)
+    flex-basis: 30% (Mỗi mục chiếm khoảng 1/3 không gian, sau đó tự điều chỉnh) */
+  flex: 1 1 30%;
+  min-width: 100px; /* Giữ kích thước nhỏ nhất để không bị quá bé */
+}
+
+/* Lưu ý: Nếu có quá nhiều sách (>3) và kích thước màn hình quá nhỏ, 
+dù đã dùng flex: 1 1 30%, các mục sách vẫn có thể bị co lại rất nhiều 
+hoặc tràn ra ngoài (dẫn đến cuộn trang tổng thể) nếu min-width quá lớn.
+
+Nếu bạn chỉ có 3 mục sách, thiết lập này sẽ làm chúng chia đều không gian.
+*/
+.book-item:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Các đoạn responsive @media cho .book-item cũng nên được loại bỏ 
+   hoặc chỉnh sửa để chúng không xung đột với flex: 0 0 180px; */
+/* VÍ DỤ, BẠN CÓ THỂ BỎ ĐOẠN SAU TRONG MEDIA QUERIES:
+@media (max-width: 900px) {
+    .book-item { flex: 1 1 45%; min-width: 150px; } 
+}
+@media (max-width: 600px) {
+    .book-item { flex: 1 1 100%; max-width: 300px; } 
+}
+*/
+
+.book-item img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.book-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  /* Bổ sung để tiêu đề sách không bị xuống dòng */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 13px;
+  color: #777;
+}
+
+.book-readers {
+  font-size: 13px;
+  color: #ff8800;
+  font-weight: 500;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1100px) {
+  .contribute-page {
+    /* Điều chỉnh gap thành pixel để tránh lỗi layout khi thu nhỏ */
+    gap: 35px;
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contribute-page {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 25px;
+  }
+
+  .book-form,
+  .contribute-info {
+    /* Đảm bảo cả hai khối đều full width trên mobile/tablet */
+    width: 100%;
+    max-width: 600px;
+  }
+
+  /* Đảm bảo form-columns chuyển thành cột dọc trên mobile */
+  .form-columns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contribute-info h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .contribute-info h3 {
+    text-align: center;
+  }
+
+  .book-list {
+    justify-content: center;
+  }
+
+  /* Trên tablet/mobile, các sách xếp ngang hàng (ví dụ 2 cột) hoặc xếp dọc */
+  .book-item {
+    /* Cho phép sách xếp thành 2 cột trên màn hình nhỏ hơn 900px */
+    flex: 1 1 45%;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-item {
+    /* Buộc 1 cột trên màn hình rất nhỏ */
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .book-item img {
+    height: 150px;
+  }
+}
