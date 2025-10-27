@@ -1,0 +1,415 @@
+/* --- Khung chứa chính --- */
+.home-page .header-home {
+  z-index: 1;
+}
+.settings-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 24px 30px;
+  margin: auto;
+  animation: slideIn 0.7s ease-in-out;
+  transition: all 0.4s ease;
+  position: relative;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* --- 1. Điều hướng Tab --- */
+.settings-nav ul {
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap; /* Cho phép xuống hàng trên di động */
+}
+
+.settings-nav li {
+  margin-right: 30px;
+}
+
+.settings-nav a {
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 12px;
+  /* position: relative; */
+  white-space: nowrap; /* Không ngắt chữ */
+}
+
+.settings-nav a.active {
+  color: #f47b50;
+}
+/* --- 2. Icon Chỉnh sửa --- */
+.edit-icon {
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-icon:hover {
+  background-color: #f9f9f9;
+}
+
+/* --- 3. Header (Ảnh & Thống kê) --- */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Cho phép xuống hàng */
+  gap: 20px;
+}
+
+.profile-picture-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Giảm margin 1 chút */
+}
+
+.profile-picture-section label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.profile-picture-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #eee;
+}
+
+.upload-link {
+  font-size: 13px;
+  color: #f47b50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.upload-link:hover {
+  text-decoration: underline;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+  flex-wrap: wrap; /* Cho phép thẻ xuống hàng */
+}
+
+.stat-card {
+  width: 160px;
+  height: 120px;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.stat-card.readings {
+  background-color: #f47b50;
+}
+
+.stat-card.contribution {
+  background-color: #8a63f0;
+}
+
+.stat-card i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* --- 4. Form Thông tin --- */
+.profile-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Cho phép input xuống hàng */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Mỗi nhóm chiếm 1 phần (tối thiểu) */
+  min-width: 250px; /* Đảm bảo không quá hẹp */
+}
+
+.form-group.full-width {
+  width: 100%;
+  flex: none; /* Không co giãn */
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f47b50;
+  box-shadow: 0 0 0 3px rgba(244, 123, 80, 0.2);
+}
+
+/* Kiểu riêng cho ô SĐT */
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  overflow: hidden; /* Giữ bo góc */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.phone-input span {
+  padding: 12px 0 12px 15px;
+  font-size: 14px;
+  color: #777;
+  background-color: #f9f9f9;
+  border-right: 1px solid #e0e0e0;
+}
+
+.phone-input input[type="tel"] {
+  border: none;
+  background-color: transparent;
+  flex: 1;
+  padding-left: 10px; /* Thêm khoảng cách nhỏ */
+}
+
+.phone-input input[type="tel"]:focus {
+  box-shadow: none; /* Bỏ box-shadow của input */
+}
+
+.phone-input:focus-within {
+  /* Highlight cả khung khi focus */
+  border-color: #f47b50;
+  box-shadow: 0 0 0 3px rgba(244, 123, 80, 0.2);
+}
+
+/* --- 5. Nút bấm (Actions) --- */
+.form-actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-update {
+  background-color: #f47b50;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-update:hover {
+  background-color: #e06a40;
+}
+
+.btn-reset {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-left: 5px; /* Giảm margin */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-reset:hover {
+  color: #333;
+}
+
+/* --- Responsive cho Di động --- */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center; /* Căn giữa khi xếp chồng */
+    width: 100%;
+  }
+
+  .profile-picture-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-stats {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0; /* Bỏ gap của row */
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 20px; /* Thêm margin cho mỗi group */
+  }
+
+  .edit-icon {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-nav ul {
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+
+  .settings-nav li {
+    margin-right: 15px;
+    margin-bottom: 10px; /* Thêm margin cho các tab */
+  }
+
+  .settings-nav a {
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+
+  .stat-card {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+  }
+}
+/* --- Thêm CSS cho Validation --- */
+
+/* Ẩn thông báo lỗi mặc định */
+.form-group small {
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  position: absolute; /* Giúp không làm xô lệch layout */
+  bottom: 1px; /* Hiện ngay dưới input */
+}
+
+/* Kiểu cho input khi bị lỗi */
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error .phone-input {
+  border-color: #e74c3c; /* Màu đỏ */
+}
+
+/* Kiểu cho thông báo lỗi */
+.form-group.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+/* Kiểu cho input khi thành công */
+.form-group.success input,
+.form-group.success textarea,
+.form-group.success .phone-input {
+  border-color: #2ecc71; /* Màu xanh lá */
+}
+
+/* Cần thêm position: relative cho .form-group để .small định vị đúng */
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+  padding-bottom: 20px; /* Thêm khoảng đệm để chứa text lỗi */
+}
+
+/* Sửa lại .form-group.full-width */
+.form-group.full-width {
+  width: 100%;
+  flex: none;
+  padding-bottom: 20px;
+}

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/myself.css" />
+    <link rel="stylesheet" href="./css/homestyle.css" />
+    <link rel="stylesheet" href="./css/update.css">
     <script src="./javascript/book.js" defer></script>
 
     <title>Document</title>
@@ -16,11 +17,11 @@
           <div class="main-container">
             <!--thanh dieu huong  -->
             <div class="navigation">
-              <a href="#"><img src="./img/logo.png" alt="Logo" /></a>
+              <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
               <nav>
                 <ul>
                   <li>
-                    <a href="./index.html">
+                    <a class="active" href="./index.html" class="active">
                       <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
                       <svg
                         height="16px"
@@ -73,7 +74,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="./myself.html"  class="active">
+                    <a href="./myself.html">
                       <svg
                         width="20"
                         height="21"
@@ -221,173 +222,90 @@
                           </div>
                         </button>
                         <div class="dropdown-content">
-                          <a href="profile.html">Profile</a>
-                          <a href="#">Logout</a>
+                          <a href="#">Exit</a>
                           
                         </div>
                     </div>
                   </div>
                 </div>
-                <div class="menu1">
-                  <h1>Your <span class="color">Shelf</span></h1>
-                </div>
-                <div class="menu2">
-                  <a href="#">All Books</a>
-                  <a href="#">Favourite</a>
-                  <a href="#">Borrowed Books</a>
-                  <a href="#">E-Books</a>
-                  <a href="#">Audio Books</a>
-                  <a href="#">Articles & Journals</a>
-                </div>
-                <div class="book-list">
-                  <div class="book-card">
-                  <!--ảnh và thông tin sách-->
-                    <div class="book-info left">
-                      <img src="./img/arr3.png" alt="Don't Make Me Think">
-                      <p class="title">Don't Make Me Think</p>
-                      <p class="author">Steve Krug, 2000</p>
-                      <p class="rating">⭐ 4.5/5</p>
-                   </div>
-                   <div class="book-info right">
-                      <dl>
-                        <dt>Borrowed on</dt>
-                        <dd>11 Mar 2023 09:00 AM</dd>
 
-                        <dt>Submission Due</dt>
-                        <dd>14 Mar 2023</dd>
-                      </dl>
-                      <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
+                <div class="main-content">
+                  <div class="settings-container">
+                    <nav class="settings-nav">
+                      <ul>
+                        <li><a href="#" class="active">Account Setting</a></li>
+                      </ul>
+                    </nav>
 
+                    <main class="settings-body">
+                      <a href="#" class="edit-icon" id="edit-profile-btn">
+                        <img src="./icon/Edit.svg" alt="edit">
+                      </a>
+                      <div class="profile-header">  
+                        <div class="profile-picture-section">
+                          <label>Your Profile Picture</label>
+                          <img src="./img/image.png" alt="Profile Picture">
+                          <a href="#" class="upload-link">Upload New photo</a>
+                        </div>
+
+                        <div class="profile-stats">
+                          <div class="stat-card readings">
+                          <i class="fa-solid fa-book-open"></i>
+                          <span class="stat-number">120</span>
+                          <span class="stat-label">Readings</span>
+                        </div>
+                        <div class="stat-card contribution">
+                          <i class="fa-solid fa-gift"></i>
+                          <span class="stat-number">10</span>
+                          <span class="stat-label">Contribution</span>
+                        </div>
                       </div>
-                  </div>
-               </div>
-                <!-- quyên sách 2-->
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/arr4.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="ebook">E-BOOK</button>
-                        <button class="read">read</button>
-
                     </div>
 
+                   <form class="profile-form" id="profile-form" novalidate>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="full-name">Full name</label>
+                          <input type="text" id="full-name" value="Pham Ngoc Khai" disabled>
+                          <small>Error message</small> 
+                        </div>
+                        <div class="form-group">
+                          <label for="email">College Email ID</label>
+                          <input type="email" id="email" value="29khaipham@gmail.com" disabled>
+                          <small>Error message</small>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="register-number">Register Number</label>
+                          <input type="text" id="register-number" value="6022020" disabled>
+                          <small>Error message</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="phone">phone number</label>
+                            <div class="phone-input">
+                              <span>+91</span>
+                              <input type="tel" id="phone" value="9952508995" disabled>
+                            </div>
+                            <small>Error message</small>
+                        </div>
+                      </div>
+
+                      <div class="form-group full-width">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" rows="5" disabled>I'm a Student</textarea>
+                        <small>Error message</small>
+                      </div>
+                      <div class="form-actions">
+                        <button type="submit" class="btn-update" disabled >Update Profile</button>
+                        <button type="reset" class="btn-reset" disabled >Reset</button>
+                      </div>
+                    </form>
+
+                    </main>
                   </div>
-
-                 </div>
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/rcm7.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <!-- anh 4-->
-                  <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/rcm2.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                      <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="ebook">E-BOOK</button>
-                        <button class="read">Read</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <!--anh5-->
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/rcm5.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <!--anh6-->
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/arr2.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-
+                </div>
               </div>
             </div>
           </div>

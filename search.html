@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/myself.css" />
+    <link rel="stylesheet" href="./css/homestyle.css">
+    <link rel="stylesheet" href="./css/search.css" />
     <script src="./javascript/book.js" defer></script>
 
     <title>Document</title>
@@ -16,11 +17,11 @@
           <div class="main-container">
             <!--thanh dieu huong  -->
             <div class="navigation">
-              <a href="#"><img src="./img/logo.png" alt="Logo" /></a>
+              <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
               <nav>
                 <ul>
                   <li>
-                    <a href="./index.html">
+                    <a  href="./index.html" >
                       <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
                       <svg
                         height="16px"
@@ -42,7 +43,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="./search.html">
+                    <a class="active" href="#">
                       <svg
                         width="24"
                         height="23"
@@ -73,7 +74,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="./myself.html"  class="active">
+                    <a href="./myself.html">
                       <svg
                         width="20"
                         height="21"
@@ -228,166 +229,260 @@
                     </div>
                   </div>
                 </div>
-                <div class="menu1">
-                  <h1>Your <span class="color">Shelf</span></h1>
+
+                <div class="main-content">
+                  <div class="find">
+                    <select>
+                      <option>Browse</option>
+                      <option>Engineering</option>
+                      <option>Medical</option>
+                      <option>Arts & Science</option>
+                      <option>Architecture</option>
+                      <option>Law</option>
+                    </select>
+                  </div>
+    
+                  <div class="col">
+                    <li class="Title"><p>Title</p></li>
+                    <li class="Ratings"><p>Ratings</p></li>
+                    <li class="Category"><p>Category</p></li>
+                    <li class="Availability"><p>Availability</p></li>
+                    <li class="Status"><p>Status</p></li>
+                  </div>
+<!-- python -->
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/arr1.png" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Don't make me think</h1>
+    <p class="author">Steve</p>
+    </a>
+  </article>
+
+  <p class="Rating">4.5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Computer Science</h1>
+      <p>UX Design</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">Hard Copy</p><p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">In-Shelf</p>
+    <p><img src="./img/location.png" alt=""> CS A-15</p>
+  </article>
+</div>
+
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/2.jpg" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Clean Code</h1>
+    <p class="author">Robert C. Martin</p>
+    </a>
+  </article>
+
+  <p class="Rating">5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Software Engineering</h1>
+      <p>Programming</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">Available</p>
+    <p><img src="./img/location.png" alt=""> CS B-02</p>
+  </article>
+</div>
+
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/2.jpg" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Clean Code</h1>
+    <p class="author">Robert C. Martin</p>
+    </a>
+  </article>
+
+  <p class="Rating">5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Software Engineering</h1>
+      <p>Programming</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">Available</p>
+    <p><img src="./img/location.png" alt=""> CS B-02</p>
+  </article>
+</div>
+
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/2.jpg" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Clean Code</h1>
+    <p class="author">Robert C. Martin</p>
+    </a>
+  </article>
+
+  <p class="Rating">5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Software Engineering</h1>
+      <p>Programming</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">Available</p>
+    <p><img src="./img/location.png" alt=""> CS B-02</p>
+  </article>
+</div>
+
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/2.jpg" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Clean Code</h1>
+    <p class="author">Robert C. Martin</p>
+    </a>
+  </article>
+
+  <p class="Rating">5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Software Engineering</h1>
+      <p>Programming</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">Available</p>
+    <p><img src="./img/location.png" alt=""> CS B-02</p>
+  </article>
+</div>
+
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/2.jpg" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Clean Code</h1>
+    <p class="author">Robert C. Martin</p>
+    </a>
+  </article>
+
+  <p class="Rating">5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Software Engineering</h1>
+      <p>Programming</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">Available</p>
+    <p><img src="./img/location.png" alt=""> CS B-02</p>
+  </article>
+</div>
+
+<div class="list-page">
+  <div class="img-">
+    <img src="./img/2.jpg" alt="">
+  </div>
+
+  <article class="title">
+    <a href="">
+    <h1 class="name">Clean Code</h1>
+    <p class="author">Robert C. Martin</p>
+    </a>
+  </article>
+
+  <p class="Rating">5/5</p>
+
+  <article class="Category">
+    <ul>
+      <h1>Software Engineering</h1>
+      <p>Programming</p>
+    </ul>
+  </article>
+
+  <article class="Ability">
+  <ul>
+    <p><img src="./img/tick.png" alt="" class="tick">E-Book</p><p><img src="./img/tick.png" alt="" class="tick">Audio book</p>
+  </ul>
+  </article>
+
+  <article class="Status">
+    <p class="loai">Available</p>
+    <p><img src="./img/location.png" alt=""> CS B-02</p>
+  </article>
+</div>
+<!-- endpython -->
+                  
                 </div>
-                <div class="menu2">
-                  <a href="#">All Books</a>
-                  <a href="#">Favourite</a>
-                  <a href="#">Borrowed Books</a>
-                  <a href="#">E-Books</a>
-                  <a href="#">Audio Books</a>
-                  <a href="#">Articles & Journals</a>
-                </div>
-                <div class="book-list">
-                  <div class="book-card">
-                  <!--ảnh và thông tin sách-->
-                    <div class="book-info left">
-                      <img src="./img/arr3.png" alt="Don't Make Me Think">
-                      <p class="title">Don't Make Me Think</p>
-                      <p class="author">Steve Krug, 2000</p>
-                      <p class="rating">⭐ 4.5/5</p>
-                   </div>
-                   <div class="book-info right">
-                      <dl>
-                        <dt>Borrowed on</dt>
-                        <dd>11 Mar 2023 09:00 AM</dd>
-
-                        <dt>Submission Due</dt>
-                        <dd>14 Mar 2023</dd>
-                      </dl>
-                      <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                      </div>
-                  </div>
-               </div>
-                <!-- quyên sách 2-->
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/arr4.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="ebook">E-BOOK</button>
-                        <button class="read">read</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/rcm7.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <!-- anh 4-->
-                  <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/rcm2.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                      <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="ebook">E-BOOK</button>
-                        <button class="read">Read</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <!--anh5-->
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/rcm5.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-                 <!--anh6-->
-                 <div class="book-card">
-                  <div class="book-info left">
-                    <img src="./img/arr2.png" alt="Don't Make Me Think">
-                    <p class="title">Don't Make Me Think</p>
-                    <p class="author">Steve Krug, 2000</p>
-                    <p class="rating">⭐ 4.5/5</p>
-                  </div>
-                  <div class="book-info right">
-                    <dl>
-                     <dt>Borrowed on</dt>
-                      <dd>11 Mar 2023 09:00 AM</dd>
-
-                      <dt>Submission Due</dt>
-                      <dd>14 Mar 2023</dd>
-                    </dl>
-                    <div class="buttons">
-                        <button class="borrowed">Borrowed</button>
-                        <button class="return">Return</button>
-
-                    </div>
-
-                  </div>
-
-                 </div>
-
               </div>
             </div>
           </div>
