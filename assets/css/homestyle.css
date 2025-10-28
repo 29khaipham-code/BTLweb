@@ -494,7 +494,10 @@ body {
 .book .book-list img {
   width: 100%;
 }
-
+.book .book-card a {
+  text-decoration: none;
+  color: currentColor;
+}
 .book .book-card-tittle {
   font-size: 1.2rem;
   color: #8a8a8a;
