@@ -1,0 +1,139 @@
+.main-container .btn-hamburger {
+  border: none;
+  background-color: transparent;
+}
+@media (max-width: 1024px) {
+  .layout .main-container {
+    grid-template-columns: 80px 1fr;
+  }
+  .main-container .navigation {
+    padding: 28px 10px 0; /* Giảm padding ngang */
+    align-items: center; /* Căn giữa các mục */
+  }
+
+  /* Ẩn phần support cuối sidebar */
+  .navigation .support {
+    display: none;
+  }
+
+  .navigation nav span {
+    display: none; /* Ẩn toàn bộ chữ */
+  }
+
+  /* Căn giữa các icon khi chữ đã biến mất */
+  .navigation nav a {
+    justify-content: center;
+    gap: 0;
+  }
+
+  /* Bạn có thể cần reset lại các gap đặc biệt này */
+  .navigation li:nth-child(1) a,
+  .navigation li:nth-child(2) a,
+  .navigation li:nth-child(4) a {
+    gap: 0;
+  }
+
+  /* * Cho phép header xuống hàng nếu bị chật 
+    */
+  .home-page .header-home {
+    flex-wrap: wrap; /* Cho phép các mục rớt xuống */
+    height: auto; /* Chiều cao tự động */
+    padding: 10px 0;
+  }
+  .header-home .lang-container {
+    max-width: none;
+    width: auto;
+    gap: 0;
+  }
+  .header-home .search-btn-text {
+    display: none;
+  }
+  .header-home .time-container {
+    display: none;
+  }
+  .header-home .info {
+    gap: 0;
+    max-width: none;
+    width: auto;
+  }
+  #logo img {
+    height: 30px;
+  }
+  .card .desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout .main-container {
+    grid-template-columns: 1fr; /* 1 cột duy nhất */
+  }
+
+  .main-container .navigation {
+    display: block; /* Phải là block để transform hoạt động */
+    position: fixed; /* Nằm đè lên nội dung */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Cao 100% màn hình */
+    background-color: #fff; /* Nền trắng (giống thiết kế) */
+    z-index: 4; /* Nằm trên nội dung, dưới nút hamburger */
+
+    /* Ẩn nó bằng cách đẩy sang trái */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  .btn-hamburger {
+    display: block;
+    z-index: 1001;
+  }
+  .home-page .header-home {
+    flex-wrap: nowrap; /* Không cho xuống hàng nữa */
+    padding: 0 10px;
+    z-index: 1000;
+  }
+  .home-page .info {
+    margin-left: auto;
+  }
+
+  /* Ẩn các mục không quan trọng trên mobile */
+  .home-page .lang-container,
+  .home-page .time-container {
+    display: none;
+  }
+
+  /* Thu nhỏ thanh tìm kiếm */
+  .home-page .search-container {
+    max-width: 20rem;
+  }
+  .icon.search {
+    display: none;
+  }
+
+  /* Ẩn chữ "Name" ở mục avatar */
+  .info .button span {
+    display: none;
+  }
+  .home-page .info {
+    max-width: 8rem;
+  }
+
+  .layout {
+    /* loai bo vien do ben ngoai */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+  }
+  .layout::before,
+  .layout::after {
+    display: none;
+  }
+
+  /* Sửa lại container nội dung */
+  .container-content {
+    margin-right: 0;
+    border-radius: 0;
+    height: calc(100vh - 75px);
+  }
+}

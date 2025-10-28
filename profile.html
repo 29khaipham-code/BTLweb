@@ -3,13 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/homestyle.css" />
-    <link rel="stylesheet" href="./css/update.css">
-    <script src="./javascript/book.js" defer></script>
-    <script src="./javascript/validate.js" defer></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/homestyle.css" />
+    <link rel="stylesheet" href="./assets/css/update.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- java script -->
+    <script src="./assets/javascript/book.js" defer></script>
+    <script src="./assets/javascript/validate.js" defer></script>
 
-    <title>Document</title>
+    <title>My Book Self</title>
   </head>
   <body>
     <div class="bg-color">
@@ -18,7 +39,7 @@
           <div class="main-container">
             <!--thanh dieu huong  -->
             <div class="navigation">
-              <a href="./index.html"><img src="./img/logo.png" alt="Logo" /></a>
+              <a id="logo" href="./index.html"><img src="./assets/img/logo.png" alt="Logo" /></a>
               <nav>
                 <ul>
                   <li>
@@ -151,12 +172,17 @@
                 <!-- thanh tim kiem -->
                 <div class="fixd">
                   <div class="header-home">
+                    <button class="btn-hamburger">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </button>
                     <div class="search-container fx">
                       <div class="button">
                         <button class="search-btn">
                           <span class="search-btn-text">All</span>
                           <div class="arrow">
-                            <img src="./icon/arrow.svg" alt="arrow" />
+                            <img src="./assets/icon/arrow.svg" alt="arrow" />
                           </div>
                         </button>
                         <div class="dropdown-content">
@@ -173,20 +199,20 @@
                         placeholder="Search"
                       />
                       <div class="icon search">
-                        <img src="./icon/search.svg" alt="search" />
-                        <img src="./icon/radio.svg" alt="radio" />
+                        <img src="./assets/icon/search.svg" alt="search" />
+                        <img src="./assets/icon/radio.svg" alt="radio" />
                       </div>
                     </div>
                     <!-- ngon ngu -->
                     <div class="lang-container fx">
                       <div class="icon">
-                        <img src="./icon/Translate.svg" alt="lang" />
+                        <img src="./assets/icon/Translate.svg" alt="lang" />
                       </div>
                       <div class="button">
                         <button class="search-btn">
                           <span class="search-btn-text">Lang</span>
                           <div class="arrow">
-                            <img src="./icon/arrow.svg" alt="arrow" />
+                            <img src="./assets/icon/arrow.svg" alt="arrow" />
                           </div>
                         </button>
                         <div class="dropdown-content">
@@ -199,13 +225,13 @@
                     <div class="time-container fx">
                       <div class="time">
                         <div class="icon">
-                          <img src="./icon/clock.svg" alt="clock" />
+                          <img src="./assets/icon/clock.svg" alt="clock" />
                           <span id="clock">09:00 AM</span>
                         </div>
                       </div>
                       <div class="time">
                         <div class="icon">
-                          <img src="./icon/date.svg" alt="date" />
+                          <img src="./assets/icon/date.svg" alt="date" />
                           <span id="day">4-Mar-2023</span>
                         </div>
                       </div>
@@ -213,13 +239,13 @@
                     <!-- avatar -->
                     <div class="info fx">
                       <div class="avatar">
-                        <img src="./img/image.png" alt="avatar" />
+                        <img src="./assets/img/image.png" alt="avatar" />
                       </div>
                       <div class="button">
                         <button class="search-btn">
                           Name
                           <div class="arrow">
-                            <img src="./icon/arrow.svg" alt="arrow" />
+                            <img src="./assets/icon/arrow.svg" alt="arrow" />
                           </div>
                         </button>
                         <div class="dropdown-content">
@@ -240,12 +266,12 @@
 
                     <main class="settings-body">
                       <a href="#" class="edit-icon" id="edit-profile-btn">
-                        <img src="./icon/Edit.svg" alt="edit">
+                        <img src="./assets/icon/Edit.svg" alt="edit">
                       </a>
                       <div class="profile-header">  
                         <div class="profile-picture-section">
                           <label>Your Profile Picture</label>
-                          <img src="./img/image.png" alt="Profile Picture">
+                          <img src="./assets/img/image.png" alt="Profile Picture">
                           <a href="#" class="upload-link">Upload New photo</a>
                         </div>
 

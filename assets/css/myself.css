@@ -8,10 +8,8 @@ html {
 }
 body {
   font-size: 16px;
-  position: fixed;
 }
 .bg-color {
-  width: 100vw;
   height: 100vh;
   background: linear-gradient(#fa7c54, #ec2c5a);
   /* position: relative; */
@@ -93,7 +91,6 @@ body {
 .navigation .active {
   color: #000;
 }
-
 .navigation li:hover a {
   color: #000;
 }
@@ -104,6 +101,19 @@ body {
 .navigation .support span {
   display: block;
   padding-bottom: 10px;
+}
+.btn-hamburger {
+  display: none;
+}
+.btn-hamburger div {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 5px;
+}
+.main-container .navigation.is-visible {
+  transform: translateX(0);
 }
 
 /* -----khoi noi dung----- */
@@ -255,162 +265,51 @@ body {
   display: block;
 }
 
-/* --------------khoi hot event -------------*/
-.container-content .main-content {
-  padding: 25px 0 0 35px;
-}
-.home-page .hotEvent {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.hotEvent .card-list {
-  background: linear-gradient(165deg, #eb5231 5%, #571fcf 95%);
-  height: 170px;
-  width: 400px;
-  border-radius: 20px;
-  display: flex;
-
-  overflow: hidden;
-  animation: fadeIn 0.6s ease-in-out;
-  transition: all 0.4s ease;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* ========== Tổng thể trang My shelf ========== */
+/* --- Phần tiêu đề và menu --- */
+.menu1 h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 20px;
 }
 
-.hotEvent .card {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-}
-.tranform-card {
-  transform: translateX(-100%);
-  transition: all ease 0.5s;
-}
-.hotEvent .card .card-item {
-  width: 100%;
-}
-.hotEvent .card .desc {
-  color: #fff;
-  padding: 5px;
-}
-.hotEvent .card .desc:nth-child(2) {
-  line-height: 1.5;
-}
-.hotEvent .desc.author {
-  text-align: right;
-}
-.hotEvent .dots {
-  display: flex;
-  gap: 5px;
-  margin-top: auto;
-}
-.hotEvent .dots .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  border: 1px solid #fff;
+.color {
+  color: #f15b2a;
 }
 
-.hotEvent .event-active {
-  background-color: #fff;
-}
-
-.hotEvent .new-arrivals {
-  display: flex;
-  flex-direction: column;
-  height: 170px;
-  width: 650px;
-  background: linear-gradient(-185deg, #eb5231 5%, #571fcf 95%);
-  border-radius: 20px;
-  margin-right: 25px;
-  overflow: hidden;
-  animation: slideIn 0.7s ease-in-out;
-  transition: all 0.4s ease;
-}
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hotEvent .new-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  margin-right: 25px;
-}
-.hotEvent .new-arrivals .arrivals-list {
-  display: flex;
-  margin: auto 0;
-  height: 168px;
-  width: calc(90% - 1px);
-  background-color: #fff;
-  border-radius: 0 20px 20px 0;
-  /* overflow: hidden; */
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-.hotEvent .new-arrivals .arrivals-list::-webkit-scrollbar {
-  display: none;
-}
-.hotEvent .tittle-new {
-  width: 10%;
-  height: 100%;
-  color: #fff;
-  position: relative;
-  font-size: 1.6rem;
+.menu2 {
   display: flex;
   justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
   align-items: center;
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-}
-.hotEvent .new-arrivals .arrivals-list .arrivals {
-  height: calc(100% - 15px);
-  width: 115px;
-  margin: auto 24px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 2px #c9c5c5c7, -1px -1px 2px #c9c5c5c7;
-  flex-shrink: 0;
-}
-.hotEvent .new-arrivals .img {
-  height: calc(100% - 16px);
-  width: calc(100% - 16px);
-  margin: 8px;
-  border-radius: 5px;
-  border: 1px solid #8a8a8a;
-}
-.hotEvent .new-arrivals img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-.arrivals:hover {
-  transform: scale(1.05);
-  transition: all ease 0.5s;
-  box-shadow: 3px 3px 2px rgb(202, 201, 200);
 }
 
-/* boook list */
-.book {
+.menu2 a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 16px;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu2 a:hover {
+  color: #f15b2a;
+  transform: translateY(-4px); /* Khi di chuột vào, thẻ nổi lên 4px */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); /* Bóng đậm hơn khi hover */
+}
+
+/* --- Danh sách sách (book list) --- */
+/* Danh sách tất cả sách */
+.book-list {
+  display: flex;
+  flex-wrap: wrap; /* tự xuống hàng */
+  gap: 25px;
+  justify-content: flex-start;
+  background-color: #f5f6fa;
+  padding: 30px;
   animation: slideup 0.7s ease-in-out;
   transition: all 0.4s ease;
 }
@@ -424,87 +323,147 @@ body {
     transform: translateY(0);
   }
 }
-.book .name-tag {
-  font-weight: 500;
-  font-size: 3rem;
-  margin: 30px 0;
-}
-.book .book-container {
-  margin: 45px 0;
-}
-.book .sub-header {
-  display: flex;
+/* Mỗi thẻ sách */
+.book-card {
+  display: flex; /* chia 2 cột */
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: flex-start;
+  width: 350px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px 20px;
+  gap: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.book .sub-header h3 {
-  color: #8a8a8a;
-  font-size: 2rem;
-}
-.book .btn {
-  border: none;
-  margin-right: 25px;
-  font-size: 1.6rem;
-  font-weight: normal;
-  color: #8a8a8a;
-  background-color: transparent;
-  cursor: pointer;
-}
-.book .book-list {
-  padding: 10px 0 10px 10px;
-  display: flex;
-  overflow-x: auto;
-  gap: 30px;
-  overflow-y: hidden;
-  /* scroll-behavior: smooth; */
-}
-.book .book-list::-webkit-scrollbar {
-  display: none;
-}
-.book .book-card {
-  margin-top: 5px;
-  width: 125px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  background-color: #fff;
 
-  transition: transform 0.3s ease, box-shadow 0.25s ease;
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
-.book .book-card .book-img {
-  width: calc(100% - 20px);
-  margin: 10px auto 0;
+
+/* Ảnh + thông tin sách bên trái */
+.book-card .book-info:first-child {
+  width: 45%;
+  text-align: center;
 }
-.book .book-list img {
+
+.book-card img {
   width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.book .book-card-tittle {
-  font-size: 1.2rem;
-  color: #8a8a8a;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
-.book .book-card-author {
-  color: #8a8a8a;
-  font-size: 1rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.author {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 4px;
 }
-.book .rate {
-  font-size: 1rem;
-  color: #8a8a8a;
-  padding-bottom: 10px;
+
+.rating {
+  color: #f8b400;
+  font-size: 13px;
 }
-.book .book-card p {
-  padding-bottom: 5px;
+
+/* Phần thông tin mượn bên phải */
+.book-card .book-info:last-child,
+.book-card .borrow-infor {
+  width: 55%;
+  font-size: 13px;
 }
-.book .book-card:hover {
+
+.book-card dl {
+  margin: 0;
+}
+
+.book-card dt {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.book-card dd {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+/* Nút điều khiển */
+.buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+button.return,
+button.read {
+  display: block; /* biến nút thành phần tử khối */
+  width: 100%; /* chiếm hết hàng */
+}
+
+/* Nút màu xám: Borrowed */
+button.borrowed {
+  background-color: #757575;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: default;
+}
+
+/* Nút màu đỏ: Return */
+button.return {
+  background-color: #fff;
+  color: #ff4d4f;
+  border: 1px solid #ff4d4f;
+  padding: 5px 12px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 500;
+}
 
-  transition: all ease 0.3s;
-  transform: translateY(-7px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+/* Nút màu xanh: E-BOOK */
+button.ebook {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Nút Read */
+button.read {
+  background-color: #fff;
+  color: #ff4d4f;
+  border: 1px solid #ff4d4f;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+.menu2 .act {
+  color: #ff4d4f;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu2 {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .book-card {
+    width: 90%;
+  }
 }

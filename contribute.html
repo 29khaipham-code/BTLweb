@@ -3,11 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/contribute.css" />
-    <script src="./javascript/book.js" defer></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/contribute.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- java script -->
+    <script src="./assets/javascript/book.js" defer></script>
 
-    <title>Document</title>
+    <title>My Book Self</title>
   </head>
   <body>
     <div class="bg-color">
@@ -16,7 +37,7 @@
           <div class="main-container">
             <!--thanh dieu huong  -->
             <div class="navigation">
-              <a href="#"><img src="./img/logo.png" alt="Logo" /></a>
+              <a id="logo" href="#"><img src="./assets/img/logo.png" alt="Logo" /></a>
               <nav>
                 <ul>
                   <li>
@@ -149,12 +170,17 @@
                 <!-- thanh tim kiem -->
                 <div class="fixd">
                   <div class="header-home">
+                    <button class="btn-hamburger">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </button>
                     <div class="search-container fx">
                       <div class="button">
                         <button class="search-btn">
                           <span class="search-btn-text">All</span>
                           <div class="arrow">
-                            <img src="./icon/arrow.svg" alt="arrow" />
+                            <img src="./assets/icon/arrow.svg" alt="arrow" />
                           </div>
                         </button>
                         <div class="dropdown-content">
@@ -171,20 +197,20 @@
                         placeholder="Search"
                       />
                       <div class="icon search">
-                        <img src="./icon/search.svg" alt="search" />
-                        <img src="./icon/radio.svg" alt="radio" />
+                        <img src="./assets/icon/search.svg" alt="search" />
+                        <img src="./assets/icon/radio.svg" alt="radio" />
                       </div>
                     </div>
                     <!-- ngon ngu -->
                     <div class="lang-container fx">
                       <div class="icon">
-                        <img src="./icon/Translate.svg" alt="lang" />
+                        <img src="./assets/icon/Translate.svg" alt="lang" />
                       </div>
                       <div class="button">
                         <button class="search-btn">
                           <span class="search-btn-text">Lang</span>
                           <div class="arrow">
-                            <img src="./icon/arrow.svg" alt="arrow" />
+                            <img src="./assets/icon/arrow.svg" alt="arrow" />
                           </div>
                         </button>
                         <div class="dropdown-content">
@@ -197,13 +223,13 @@
                     <div class="time-container fx">
                       <div class="time">
                         <div class="icon">
-                          <img src="./icon/clock.svg" alt="clock" />
+                          <img src="./assets/icon/clock.svg" alt="clock" />
                           <span id="clock">09:00 AM</span>
                         </div>
                       </div>
                       <div class="time">
                         <div class="icon">
-                          <img src="./icon/date.svg" alt="date" />
+                          <img src="./assets/icon/date.svg" alt="date" />
                           <span id="day">4-Mar-2023</span>
                         </div>
                       </div>
@@ -211,13 +237,13 @@
                     <!-- avatar -->
                     <div class="info fx">
                       <div class="avatar">
-                        <img src="./img/image.png" alt="avatar" />
+                        <img src="./assets/img/image.png" alt="avatar" />
                       </div>
                       <div class="button">
                         <button class="search-btn">
                           Name
                           <div class="arrow">
-                            <img src="./icon/arrow.svg" alt="arrow" />
+                            <img src="./assets/icon/arrow.svg" alt="arrow" />
                           </div>
                         </button>
                         <div class="dropdown-content">
@@ -291,14 +317,14 @@
                       <div class="book-list">
                         <!-- Bạn sẽ tự chèn ảnh ở đây -->
                         <div class="book-item">
-                          <img src="./img/arr4.png" alt="Book 1" />
+                          <img src="./assets/img/arr4.png" alt="Book 1" />
                           <p class="book-title">Don't Make Me Think</p>
                           <p class="book-author">Steve Krug, 2000</p>
                           <p class="book-readers">14k Readers</p>
                         </div>
 
                         <div class="book-item">
-                          <img src="./img/rcm3.png" alt="Book 2" />
+                          <img src="./assets/img/rcm3.png" alt="Book 2" />
                           <p class="book-title">
                             The Design of Everyday Things
                           </p>
@@ -307,7 +333,7 @@
                         </div>
 
                         <div class="book-item">
-                          <img src="./img/rcm5.png" alt="Book 3" />
+                          <img src="./assets/img/rcm5.png" alt="Book 3" />
                           <p class="book-title">Sprint</p>
                           <p class="book-author">Jake Knapp, 2000</p>
                           <p class="book-readers">14k Readers</p>

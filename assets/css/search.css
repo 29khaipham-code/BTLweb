@@ -105,6 +105,19 @@ body {
   display: block;
   padding-bottom: 10px;
 }
+.btn-hamburger {
+  display: none;
+}
+.btn-hamburger div {
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 5px;
+}
+.main-container .navigation.is-visible {
+  transform: translateX(0);
+}
 
 /* -----khoi noi dung----- */
 .container-content {
